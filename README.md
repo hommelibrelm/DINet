@@ -3,3 +3,4 @@
 ## Demo
 <p align="center"> <img src="assert/network.png" width="100%"></a> </p>
 
+# DINet
