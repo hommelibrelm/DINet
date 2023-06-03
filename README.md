@@ -45,15 +45,16 @@ After downloading MS-COCO-style Pascal VOC, please organize them as following:
 ```
 code_root/
 └── data/
-    ├── voc_fewshot_split1/     # VOC Few-shot dataset
-    ├── voc_fewshot_split2/     # VOC Few-shot dataset
-    ├── voc_fewshot_split3/     # VOC Few-shot dataset
-    └── PascalVoc_CocoStyle/    # MS-COCO-Style Pascal VOC dataset
-        ├── images/
-        └── annotations/
-            ├── xxxxx.json
-            ├── yyyyy.json
-            └── zzzzz.json
+    └── voc/  
+        ├── voc_fewshot_split1/     # VOC Few-shot dataset
+        ├── voc_fewshot_split2/     # VOC Few-shot dataset
+        ├── voc_fewshot_split3/     # VOC Few-shot dataset
+        └── PascalVoc_CocoStyle/    # MS-COCO-Style Pascal VOC dataset
+            ├── images/
+            └── annotations/
+                ├── xxxxx.json
+                ├── yyyyy.json
+                └── zzzzz.json
 ```
 
 
