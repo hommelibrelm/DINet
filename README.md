@@ -83,6 +83,8 @@ conda install pytorch=1.9.0 torchvision=0.10.0 cudatoolkit=11.1 -c pytorch
 
 After that, install other requirements:
 ```bash
+pip install mmcv-full==1.4.3
+pip install -r requirements.txt
 cd few-shot-detection/open-world-detection
 pip install -v -e .
 ```
