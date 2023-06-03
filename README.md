@@ -62,7 +62,7 @@ code_root/
 The following table provides the pre-trained weight used in the paper:
 <table><tbody>
 <tr><td align="left">pre-trained weight</td>
-<td align="center"><a href="https://drive.google.com/file/d/1d4Cqr58OCbSqwhZmbZu9Z-h13XRkSZdz/view?usp=share_link">download</a></td>
+<td align="center"><a href="https://drive.google.com/drive/folders/1y8HRAVFBX_xFvlgtp0r8Xqhq_Lv6Z6wr?usp=share_link">download</a></td>
 </tr>
 </tbody></table>
 
@@ -100,4 +100,4 @@ pip install -v -e .
 We will provide official code here to reproduce the results:
 - [ ] few-shot-detection
 - [ ] open-world-detection
-- [ ] pretrained weight
+- [X] pretrained weight
