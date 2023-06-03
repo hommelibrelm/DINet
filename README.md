@@ -87,6 +87,6 @@ cd few-shot-detection/open-world-detection
 pip install -v -e .
 ```
 We will provide official code here to reproduce the results:
-- [x] few-shot-detection
-- [x] open-world-detection
-- [x] pretrained weight
+- [ ] few-shot-detection
+- [ ] open-world-detection
+- [ ] pretrained weight
