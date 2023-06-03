@@ -104,7 +104,18 @@ pip install -r requirements.txt
 cd few-shot-detection/open-world-detection
 pip install -v -e .
 ```
+### Evaluate
+
+```bash
+python tools/test.py "path_of_config/file.py" "work_dirs/trained_weights.pth" --eval bbox
+```
+### Train
+
+```bash
+python tools/train.py "path_of_config/file.py" 
+```
+
 We will provide official code here to reproduce the results:
-- [ ] few-shot-detection
-- [ ] open-world-detection
+- [x] few-shot-detection
+- [X] open-world-detection
 - [X] pretrained weight
