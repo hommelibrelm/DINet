@@ -57,6 +57,14 @@ code_root/
                 └── zzzzz.json
 ```
 
+#### Pretrained Weight
+
+The following table provides the pre-trained weight used in the paper:
+<table><tbody>
+<tr><td align="left">pre-trained weight</td>
+<td align="center"><a href="https://drive.google.com/file/d/1d4Cqr58OCbSqwhZmbZu9Z-h13XRkSZdz/view?usp=share_link">download</a></td>
+</tr>
+</tbody></table>
 
 ### Code Installation
 
