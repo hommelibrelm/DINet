@@ -37,7 +37,7 @@ code_root/
 ```
 #### Pascal VOC for Few-Shot Object Detection
 
-We use the train/val sets of PASCAL VOC 2007+2012 for training and the test set of PASCAL VOC 2007 for evaluation. We randomly split the 20 object classes into 15 base classes and 5 novel classes, and we consider 3 random splits. We transform the original Pascal VOC dataset format into MS-COCO format for parsing. The transformed Pascal VOC dataset is available for download at [GoogleDrive](https://drive.google.com/file/d/1-Yu8lxTI25d_tAq4N0uKdW7RMwInxI2R/view?usp=share_link).
+We use the train/val sets of PASCAL VOC 2007+2012 for training and the test set of PASCAL VOC 2007 for evaluation. We randomly split the 20 object classes into 15 base classes and 5 novel classes, and we consider 3 random splits. We transform the original Pascal VOC dataset format into MS-COCO format for parsing. The transformed Pascal VOC dataset is available for download at [GoogleDrive](https://drive.google.com/file/d/1u4OUGuHYr5VnBDHNZ4LMWV6g8To-YPHc/view?usp=share_link).
 
 
 After downloading MS-COCO-style Pascal VOC, please organize them as following:
