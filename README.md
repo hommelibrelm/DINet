@@ -66,6 +66,13 @@ The following table provides the pre-trained weight used in the paper:
 </tr>
 </tbody></table>
 
+After downloading pre-trained weight, please organize them as following:
+```
+code_root/
+└── trained_weights/
+    └── xxx.pth/  
+```
+
 ### Code Installation
 
 First, clone the repository locally:
