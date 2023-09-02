@@ -141,7 +141,7 @@ class StageDynamicDecoupledHead(RPNHead):
         self.anchor_scales = anchor_generator['scales']
         self.adapt_cfg = adapt_cfg
         self.use_tower_convs = use_tower_convs
-        self.stacked_convs = 1
+        self.stacked_convs = 4
         self.dcn_on_last_conv = dcn_on_last_conv
         self.conv_cfg = conv_cfg
         self.norm_cfg = norm_cfg

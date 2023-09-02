@@ -142,7 +142,7 @@ class RegionAssigner(BaseAssigner):
         mlvl_ignore_flags = []
         for lvl in range(num_lvls):
             h, w = featmap_sizes[lvl]
-            # assert h * w == mlvl_anchors[lvl].shape[0] 
+            assert h * w == mlvl_anchors[lvl].shape[0]
             assigned_gt_inds = gt_bboxes.new_full((h * w, ),
                                                   0,
                                                   dtype=torch.long)

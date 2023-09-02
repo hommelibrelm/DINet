@@ -6,13 +6,9 @@ from .dii_head import DIIHead
 from .double_bbox_head import DoubleConvFCBBoxHead
 from .sabl_head import SABLHead
 from .scnet_bbox_head import SCNetBBoxHead
-from .convfc_bbox_score_head import (ConvFCBBoxScoreHead, 
-									 Shared2FCBBoxScoreHead)
-from .inter_bbox_score_head import InterBBoxHead
 
 __all__ = [
     'BBoxHead', 'ConvFCBBoxHead', 'Shared2FCBBoxHead',
     'Shared4Conv1FCBBoxHead', 'DoubleConvFCBBoxHead', 'SABLHead', 'DIIHead',
-    'SCNetBBoxHead', 'ConvFCBBoxScoreHead', 'Shared2FCBBoxScoreHead',
-    'InterBBoxHead'
+    'SCNetBBoxHead'
 ]

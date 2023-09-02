@@ -7,9 +7,9 @@ import torch
 import torch.distributed as dist
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 from mmcv.runner import (DistSamplerSeedHook, EpochBasedRunner,
-                         Fp16OptimizerHook, OptimizerHook,
+                         Fp16OptimizerHook, OptimizerHook, build_optimizer,
                          build_runner, get_dist_info)
-from mmcv_custom.runner import build_optimizer
+
 from mmdet.core import DistEvalHook, EvalHook
 from mmdet.datasets import (build_dataloader, build_dataset,
                             replace_ImageToTensor)

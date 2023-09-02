@@ -37,7 +37,6 @@ class CocoDataset(CustomDataset):
                'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock',
                'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush')
 
-
     def load_annotations(self, ann_file):
         """Load annotation from COCO style annotation file.
 
@@ -367,7 +366,7 @@ class CocoDataset(CustomDataset):
                  metric='bbox',
                  logger=None,
                  jsonfile_prefix=None,
-                 classwise=True,
+                 classwise=False,
                  proposal_nums=(100, 300, 1000),
                  iou_thrs=None,
                  metric_items=None):

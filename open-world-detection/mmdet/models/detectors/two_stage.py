@@ -68,20 +68,6 @@ class TwoStageDetector(BaseDetector):
         if self.with_neck:
             x = self.neck(x)
         return x
-    
-    # def extract_feat(self, img):
-    #     """Directly extract features from the backbone+neck."""
-    #     x = self.backbone(img)
-    #     # 可视化resnet产生的特征
-    #     from tools.visualizations.vis_cam import draw_feature_map
-    #     draw_feature_map(x)
-    #     if self.with_neck:
-    #         x = self.neck(x)
-    #         # 可视化FPN产生的特征
-    #         from tools.visualizations.vis_cam import draw_feature_map
-    #         draw_feature_map(x)
-    #     return x
-
 
     def forward_dummy(self, img):
         """Used for computing network flops.

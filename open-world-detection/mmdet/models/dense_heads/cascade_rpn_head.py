@@ -144,6 +144,11 @@ class StageCascadeRPNHead(RPNHead):
                 sampler_cfg = dict(type='PseudoSampler')
             self.sampler = build_sampler(sampler_cfg, context=self)
 
+        if init_cfg is None:
+            self.init_cfg = dict(
+                type='Normal', std=0.01, override=[dict(name='rpn_reg')])
+            if self.with_cls:
+                self.init_cfg['override'].append(dict(name='rpn_cls'))
 
     def _init_layers(self):
         """Init layers of a CascadeRPN stage."""
@@ -454,7 +459,6 @@ class StageCascadeRPNHead(RPNHead):
         Returns:
             dict[str, Tensor]: A dictionary of loss components.
         """
-
         featmap_sizes = [featmap.size()[-2:] for featmap in bbox_preds]
         label_channels = self.cls_out_channels if self.use_sigmoid_cls else 1
         cls_reg_targets = self.get_targets(
@@ -476,6 +480,7 @@ class StageCascadeRPNHead(RPNHead):
             # which follows guided anchoring.
             num_total_samples = sum([label.numel()
                                      for label in labels_list]) / 200.0
+
         # change per image, per level anchor_list to per_level, per_image
         mlvl_anchor_list = list(zip(*anchor_list))
         # concat mlvl_anchor_list
@@ -525,9 +530,8 @@ class StageCascadeRPNHead(RPNHead):
                 are bounding box positions (tl_x, tl_y, br_x, br_y) and the
                 5-th column is a score between 0 and 1.
         """
-
-
         assert len(cls_scores) == len(bbox_preds)
+
         result_list = []
         for img_id in range(len(img_metas)):
             cls_score_list = select_single_mlvl(cls_scores, img_id)
@@ -731,7 +735,6 @@ class CascadeRPNHead(BaseDenseHead):
         """Forward train function."""
         assert gt_labels is None, 'RPN does not require gt_labels'
 
-            
         featmap_sizes = [featmap.size()[-2:] for featmap in x]
         device = x[0].device
         anchor_list, valid_flag_list = self.stages[0].get_anchors(
